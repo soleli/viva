@@ -45,24 +45,24 @@ $("#cargando2").css("display","inlineblock");
         console.log(id);
     }
 }
- function noticias(id) {
+ function seccion(id) {
+$("#noticias").html("");
 
- $("#noticias").html (" "); 
-	archivoValidacion = "http://fenix951.com.ar/nuevo_2013/Ajdh/todas.php?jsoncallback=?"
+	archivoValidacion = "http://www.viva961.com.ar/Adv/todas.php?jsoncallback=?"
 		$.getJSON( archivoValidacion, {id:id})
 	.done(function(data) {
-	if(id==3){ var seccion="Locales"; }
-	if(id==4){ var seccion="Nacionales"; }
-	if(id==5){ var seccion="Internacionales"; }
-	if(id==6){ var seccion="Deporte"; }
-	if(id==7){ var seccion="Sociedad"; }
-	if(id==8){ var seccion="Farandula"; }
+	if(id==1){ var seccion="Locales"; }
+	if(id==2){ var seccion="Nacionales"; }
+	if(id==3){ var seccion="Internacionales"; }
+	if(id==4){ var seccion="Deporte"; }
+	if(id==5){ var seccion="Sociedad"; }
+	if(id==6){ var seccion="Farandula"; }
 	$("#noticias").append("<p class='tituseccion'>"+seccion+"</p>");
 		$(data).each(function (index, data) {   
 							$("#noticias").append(
 							
 									"<li class='ui-li-has-thumb ui-first-child'><a href='#noticia1' data-transition='flip' onclick='cargar("+data.id_Noticia+");'>"+
-									"<img class='imgcate' src='http://fenix951.com.ar/nuevo_2013/imagenes/"+data.url+"_t.jpg'>"+
+									"<img class='imgcate' src='http://viva961.com.ar/imagenes/"+data.url+"_t.jpg'>"+
 									data.titulo+
 									
 									"</a></li><div style='clear:both;'></div><hr> <br>"

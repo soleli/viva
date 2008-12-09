@@ -35,12 +35,12 @@
 			<div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide active">inicio</div>
-            <div class="swiper-slide">Locales </div>
-            <div class="swiper-slide">Nacionales</div>
-            <div class="swiper-slide">Internacionales</div>
-            <div class="swiper-slide">Sociales</div>
-            <div class="swiper-slide">Deportes</div>
-            <div class="swiper-slide">Espetaculos</div>
+            <div class="swiper-slide"><a onclick="seccion('1')"  href="#seccion">Locales</a> </div>
+            <div class="swiper-slide"><a onclick="seccion('2')"  href="#seccion"> Nacionales </a></div>
+            <div class="swiper-slide"><a onclick="seccion('3')"  href="#seccion"> Internacionales</a></div>
+            <div class="swiper-slide"><a onclick="seccion('4')"  href="#seccion"> Sociales</a></div>
+            <div class="swiper-slide"><a onclick="seccion('5')"  href="#seccion"> Deportes </a></div>
+            <div class="swiper-slide"><a onclick="seccion('6')"  href="#seccion"> Espetaculos</a></div>
            
         </div>
        
@@ -83,31 +83,12 @@
 	</div>
 	
 	 <!------------Pagina Seccion Noticias--------->
-	<div data-role="page" id="todas">
+	<div data-role="page" id="seccion">
 	
-			<div data-role="panel" data-display="overlay" data-position="left" id="panel3">
-				<div data-role="header" class="ui-b" data-theme="b"> <h1 >Menu</h1> </div>
-				<div data-role="content">
-				<ul data-role="listview" style="margin:0px"> 
-						<li> <a href="index.html" > Inicio</a></li>
-						<li> <a onclick="noticias('3')" data-transition='flip'  href="#todas"> Locales</a></li>
-						<li> <a onclick="noticias('4')" data-transition='flip' href="#todas"> Nacionales</a></li>
-						<li> <a onclick="noticias('5')" data-transition='flip' href="#todas"> Internacionales</a></li>
-						<li> <a onclick="noticias('6')" data-transition='flip' href="#todas"> Deporte </a></li>
-						<li> <a onclick="noticias('7')" data-transition='flip' href="#todas"> Sociedad</a></li>
-						<li> <a onclick="noticias('8')"  data-transition='flip' href="#todas"> Far&aacutendula </a></li>
-						<li> <a href="#c"  data-transition='flip' > Clasificados</a></li>
-						<li> <a href="#contacto"  data-transition='flip' > Contacto</a></li>
-					</ul>
-				<a href="#demo-links" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Cerrar</a>
-				</div>
-				<div data-role="footer" class="ui-f" data-theme="f">
-				</div>
-			</div>
+			
 			<div data-role="header" data-position="fixed" class="ui-b" data-theme="b">
-				<h1>Fenix951</h1>
-				<a href="#panel3"  id="butonham" data-role="button" data-icon="bars" data-icompos="no-text" data-theme="b"></a>
-				<a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+				<h1  ><img src="img/logo.png"  width=50%; /></h1>
+				<a href="#" class="ui-btn-right" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
 			</div>
 			<div data-role="content" class="ui-fondo"  data-theme="fondo">
 			<form class="ui-filterable">
