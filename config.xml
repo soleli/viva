@@ -1,15 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.viva.com.ar" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>viva</name>
+<widget id="viva" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Viva</name>
     <description>
-      Aplicacion de Viva
+        viva jsk
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
        Soledad Alaniz
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
-	<preference name="http://api.phonegap.com/1.0/network" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
@@ -23,12 +22,15 @@
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="14" />
-	<preference name="android-targetSdkVersion" value="19" />
     <preference name="android-installLocation" value="auto" />
-      <icon src="icon.png" />
-    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon.png" />
+   
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+   
+    <icon src="icon.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
     <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
     <icon gap:platform="blackberry" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="www/res/icon/blackberry/icon-80.png" />
@@ -50,10 +52,8 @@
     <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
-	<gap:plugin name="org.apache.cordova.media" version="0.2.8" />
-	<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
     <access origin="*" />
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -63,11 +63,11 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-	<allow-navigation href="*" />
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+	
 	<gap:platform name="blackberry" />
 	<gap:platform name="winphone" />
 	<feature name="SocialSharing">
@@ -75,5 +75,4 @@
 	</feature>
 	<feature name="Media">
     <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-</feature>
 </widget>
